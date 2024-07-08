@@ -59,4 +59,19 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.3;
 }
+.header-bottom .dropdown button {
+  color: white;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+}
+.header-bottom .dropdown button:focus {
+  box-shadow: none;
+}
+.header-bottom .dropdown-menu {
+  background-color: var(--color-dark-slate-blue);
+  width: 100%;
+}
 /* End Header */
