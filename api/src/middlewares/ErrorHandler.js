@@ -16,4 +16,14 @@ const errorHandler = (err, req, res, next) => {
   });
 };
 
-export { notFound, errorHandler };
+const notAuthorized = (err, req, res, next) => {
+  const statusCode = res.statusCode === 200 ? 401 : res.statusCode;
+  res.status(statusCode);
+  res.json({
+    status: false,
+    message: err?.message,
+    stack: err?.stack,
+  });
+};
+
+export { notFound, errorHandler, notAuthorized };

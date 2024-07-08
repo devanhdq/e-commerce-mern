@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema(
       default: [],
     },
     address: [{ type: mongoose.Schema.Types.ObjectId, ref: "address" }],
-    boughtProducts: [{ type: mongoose.Schema.Types.ObjectId, ref: "orders" }],
+    boughtProducts: [{ type: mongoose.Schema.Types.ObjectId, ref: "order" }],
   },
   {
     timestamps: true,
