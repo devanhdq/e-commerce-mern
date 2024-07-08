@@ -11,6 +11,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 a {
   text-decoration: none;
@@ -29,6 +30,9 @@ a {
 .gap-20 {
   gap: 20px;
 }
+.gap-30 {
+  gap: 30px;
+}
 
 /* Start styling Header */
 .header-top-strip {
@@ -43,5 +47,16 @@ a {
 }
 .header-upper .cart-icon {
   color: var(--color-light-orange);
+}
+
+.header-bottom {
+  background-color: var(--color-dark-slate-blue);
+}
+.header-bottom .menu-links a {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
 }
 /* End Header */
