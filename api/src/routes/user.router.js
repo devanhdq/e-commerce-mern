@@ -17,9 +17,8 @@ userRouter.get("/:id", authMiddleware, getUserById);
 userRouter.delete("/:id", authMiddleware, isAdmin, deleteUserById);
 userRouter.put("/:id", authMiddleware, updateUserById);
 
-userRouter.put("/block-user/:id", authMiddleware, isAdmin, blockUserById);
-userRouter.put("/unblock-user/:id", authMiddleware, isAdmin, unblockUserById);
-
+userRouter.patch("/block-user/:id", authMiddleware, isAdmin, blockUserById);
+userRouter.patch("/unblock-user/:id", authMiddleware, isAdmin, unblockUserById);
 
 
 export default userRouter;
