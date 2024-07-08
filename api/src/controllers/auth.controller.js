@@ -3,7 +3,7 @@ import asyncHandler from "express-async-handler";
 
 //
 import User from "../models/User.model.js";
-import { generatorToken } from "../middlewares/Jwt.js";
+import { generatorToken } from "../configs/Jwt.js";
 
 export const register = asyncHandler(async (req, res) => {
   const { firstName, lastName, phoneNumber, email, password, role } = req.body;
@@ -26,7 +26,6 @@ export const register = asyncHandler(async (req, res) => {
 
 export const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-
   // check user existed
   let findUser = await User.findOne({ email });
   if (findUser && (await findUser.matchPassword(password))) {

@@ -43,6 +43,9 @@ const userSchema = new mongoose.Schema(
     },
     address: [{ type: mongoose.Schema.Types.ObjectId, ref: "address" }],
     boughtProducts: [{ type: mongoose.Schema.Types.ObjectId, ref: "order" }],
+    refreshToken: {
+      type: String,
+    },
   },
   {
     timestamps: true,
