@@ -38,11 +38,10 @@ export const updateUserById = asyncHandler(async (req, res) => {
     email: req?.body?.email,
     phoneNumber: req?.body?.phoneNumber,
     role: req?.body?.role,
-    password: req?.body?.password
+    password: req?.body?.password,
   };
-  
-  const user = await User.findByIdAndUpdate(id, userUpdate)
-    .select("-password")
+
+  const user = await User.findByIdAndUpdate(id, userUpdate).select("-password");
   if (!user) {
     return Response(res, 404, false, "User not found");
   } else {
@@ -58,5 +57,27 @@ export const deleteUserById = asyncHandler(async (req, res) => {
     return Response(res, 404, false, "User not found");
   } else {
     return Response(res, 200, true, "Delete user successfully");
+  }
+});
+
+// @desc    Block user by id
+export const blockUserById = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findByIdAndUpdate(id, { isBlocked: true });
+  if (!user) {
+    return Response(res, 404, false, "User not found");
+  } else {
+    return Response(res, 200, true, "Block user successfully");
+  }
+});
+
+// @desc    Unblock user by id
+export const unblockUserById = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findByIdAndUpdate(id, { isBlocked: false });
+  if (!user) {
+    return Response(res, 404, false, "User not found");
+  } else {
+    return Response(res, 200, true, "Unblock user successfully");
   }
 });

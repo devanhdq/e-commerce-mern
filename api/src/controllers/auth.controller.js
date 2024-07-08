@@ -6,41 +6,39 @@ import User from "../models/User.model.js";
 import { generatorToken } from "../middlewares/Jwt.js";
 
 export const register = asyncHandler(async (req, res) => {
-    const { firstName, lastName, phoneNumber, email, password, role } = req.body;
-    const userEmail = await User.findOne({ email });
-    if (userEmail) {
-      return Response(res, 400, false, "User already existed");
-    } else {
-      const newUser = new User({
-        email,
-        password,
-        firstName,
-        lastName,
-        phoneNumber,
-        role,
-      });
-      await newUser.save();
-      return Response(res, 201, true, "User was created successfully");
-    }
+  const { firstName, lastName, phoneNumber, email, password, role } = req.body;
+  const userEmail = await User.findOne({ email });
+  if (userEmail) {
+    return Response(res, 400, false, "User already existed");
+  } else {
+    const newUser = new User({
+      email,
+      password,
+      firstName,
+      lastName,
+      phoneNumber,
+      role,
+    });
+    await newUser.save();
+    return Response(res, 201, true, "User was created successfully");
+  }
 });
 
 export const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
+
   // check user existed
-  const findUser = await User.findOne({ email }).select("-password");
+  let findUser = await User.findOne({ email });
   if (findUser && (await findUser.matchPassword(password))) {
+    // remove password
+    delete findUser._doc.password;
+    // generate token
     const userWithoutPassword = {
-      _id: findUser?._id,
-      firstName: findUser?.firstName,
-      lastName: findUser?.lastName,
-      email: findUser?.email,
-      phoneNumber: findUser?.phoneNumber,
+      ...findUser._doc,
       token: generatorToken(findUser?._id),
     };
     return Response(res, 200, true, "Login successfully", userWithoutPassword);
   } else {
-    throw new Error("Invalid email or password");
+    return Response(res, 401, false, "Invalid email or password");
   }
 });
-
-

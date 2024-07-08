@@ -29,6 +29,10 @@ const userSchema = new mongoose.Schema(
     },
     isActive: {
       type: Boolean,
+      default: true,
+    },
+    isBlocked: {
+      type: Boolean,
       default: false,
     },
     cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "product" }],
