@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-eerie-black: #131921;
+  --color-charcoal: #3b4149;
+  --color-light-orange: #febd69;
+  --color-dark-slate-blue: #232f3e;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-15 {
+  gap: 15px;
+}
+.gap-20 {
+  gap: 20px;
+}
+
+/* Start styling Header */
+.header-top-strip {
+  background-color: var(--color-eerie-black);
+  border-bottom: var(--color-charcoal) 2px solid;
+}
+.header-upper {
+  background-color: var(--color-eerie-black);
+}
+.header-upper .input-group-text {
+  background-color: var(--color-light-orange);
+}
+.header-upper .cart-icon {
+  color: var(--color-light-orange);
+}
+/* End Header */
