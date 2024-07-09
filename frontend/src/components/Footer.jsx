@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-5">
-              <div className="footer-top-data d-flex align-items-center">
+              <div className="footer-top-data d-flex align-items-center gap-30">
 
               </div>
             </div>
