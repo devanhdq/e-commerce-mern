@@ -112,27 +112,29 @@ const Header = () => {
                       aria-expanded="false"
                     >
                       <CgMenuGridR size={30} />
-                      Shop Categories
+                     <span className="me-5 d-inline-block">
+                     Shop Categories
+                     </span>
                     </button>
                     <ul
                       className="dropdown-menu"
                       aria-labelledby="dropdownMenuButton1"
                     >
                       <li>
-                        <a className="dropdown-item text-white" href="#">
+                        <Link className="dropdown-item text-white" to={"/"}>
                           Action
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item text-white" href="#">
+                        <Link className="dropdown-item text-white" to={"/"}>
                           Another action
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div className="menu-links">
-                  <div className="d-flex align-items-center gap-15">
+                  <div className="d-flex align-items-center gap-5">
                     <NavLink className="text-white" to="/">
                       Home
                     </NavLink>
