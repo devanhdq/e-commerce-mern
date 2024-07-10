@@ -97,7 +97,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="header-bottom py-3">
+      <div className="header-bottom">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">

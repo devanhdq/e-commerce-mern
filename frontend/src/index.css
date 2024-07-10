@@ -10,6 +10,7 @@
   --color-dark-slate-blue: #232f3e;
   --color-blue-midnight: #3c5471;
   --color-light-white: #d8d6d6;
+  --color-red-orange: #bf4800;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -34,6 +35,23 @@ a {
 }
 .gap-30 {
   gap: 30px;
+}
+.button{
+  background-color: var(--color-dark-slate-blue);
+  color: white;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+}
+.button:hover {
+  background-color: var(--color-light-orange);
+  color: white;
 }
 
 /* Start styling Header */
@@ -90,20 +108,78 @@ a {
 /* End Header */
 
 /* Starting styling footer */
-
 footer {
   background-color: var(--color-dark-slate-blue);
 }
 
-footer hr{
+footer hr {
   color: white;
   width: 95%;
   text-align: center;
-  margin:auto;
+  margin: auto;
 }
 
-footer .input-group-text:hover{
-background-color: var(--color-light-white);
+footer .input-group-text:hover {
+  background-color: var(--color-light-white);
 }
-
 /* End styling footer */
+
+/* Home page */
+/* Start styling banner */
+.main-banner-content {
+  top: 10%;
+  left: 5%;
+}
+.main-banner-content h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: var(--color-red-orange);
+  margin: 0 0 12px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.main-banner-content h5 {
+  font-size: 42px;
+  line-height: 54px;
+  font-weight: 600;
+  color: white;
+  text-transform: none;
+}
+.main-banner-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 20px;
+}
+.small-banner-content {
+  top: 25%;
+  left: 10%;
+}
+.small-banner-content h4 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 800;
+  color: var(--color-red-orange);
+  margin: 0 0 12px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.small-banner-content h5 {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 600;
+  color: white;
+  text-transform: none;
+}
+.small-banner-content p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 20px;
+}
+/* End banner */
+
+/* End Home page */
