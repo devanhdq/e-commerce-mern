@@ -13,8 +13,7 @@
   --color-red-orange: #bf4800;
 }
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-family: "Rubik", sans-serif;
 }
 a {
   text-decoration: none;
@@ -36,7 +35,7 @@ a {
 .gap-30 {
   gap: 30px;
 }
-.button{
+.button {
   background-color: var(--color-dark-slate-blue);
   color: white;
   font-size: 16px;
@@ -44,7 +43,7 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.3;
-  padding: 10px 20px;
+  padding: 13px 33px;
   border: none;
   cursor: pointer;
   border-radius: 5%;
@@ -53,7 +52,23 @@ a {
   background-color: var(--color-light-orange);
   color: white;
 }
-
+.small-button {
+  background-color: var(--color-dark-slate-blue);
+  color: white;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+}
+.small-button:hover {
+  background-color: var(--color-light-orange);
+  color: white;
+}
 /* Start styling Header */
 .header-top-strip {
   background-color: var(--color-eerie-black);
@@ -131,9 +146,9 @@ footer .input-group-text:hover {
   left: 5%;
 }
 .main-banner-content h4 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-red-orange);
   margin: 0 0 12px;
   letter-spacing: 0.3px;
@@ -153,6 +168,41 @@ footer .input-group-text:hover {
   color: white;
   margin: 0 0 20px;
 }
+
+.small-banner-content {
+  top: 20%;
+  left: 10%;
+}
+.small-banner-content h4 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-red-orange);
+  margin: 0 0 12px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.small-banner-content h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  color: white;
+  text-transform: none;
+}
+.small-banner-content p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 20px;
+}
+.small-banner {
+  width: 49%;
+}
+/* 
+
+
+
 .small-banner-content {
   top: 25%;
   left: 10%;
@@ -179,7 +229,7 @@ footer .input-group-text:hover {
   font-weight: 400;
   color: white;
   margin: 0 0 20px;
-}
+} */
 /* End banner */
 
 /* End Home page */
